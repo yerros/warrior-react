@@ -89,9 +89,9 @@ function ViewPigeon(props) {
 
   return (
     <Layout title={`Trah ${ring}`}>
-      <div className="shadow playground rounded-xl ">
+      <div className="shadow max-w-screen playground rounded-xl">
         <div className="brackets_container">
-          <div className="p-6 text-xl font-semibold">Nama Team</div>
+          <div className="p-6 text-xl font-semibold">Silsilah / TRAH</div>
           <table>
             <thead>
               <tr>
@@ -123,7 +123,7 @@ function ViewPigeon(props) {
                 </td>
                 <td className="round_column r_2">
                   <div className="mtch_container">
-                    <div className="match_unit">
+                    <div className="match_final">
                       <div className="m_segment m_top winner">
                         <span>
                           <button className="w-full text-left transition duration-300 ease-in-out hover:bg-gray-300 focus:outline-none">

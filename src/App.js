@@ -10,6 +10,7 @@ import ViewPigeon from "./pages/pigeon/ViewPigeon";
 import EditPigeon from "./pages/pigeon/EditPigeon";
 import { Get } from "./lib";
 import { logout } from "./redux/actions";
+import Pedigree from "./pages/Pedigree";
 
 class App extends Component {
   componentDidMount() {
@@ -40,6 +41,12 @@ class App extends Component {
             path="/merpati"
             authenticated={isLoggedIn}
             component={Pigeon}
+          />
+          <PrivateRoute
+            exact
+            path="/trah"
+            authenticated={isLoggedIn}
+            component={Pedigree}
           />
           <PrivateRoute
             path="/merpati/add"

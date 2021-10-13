@@ -26,6 +26,7 @@ function EditPigeon(props) {
   const [indukBetina, setIndukBetina] = useState("");
   const [editM, setEditM] = useState(false);
   const [editF, setEditF] = useState(false);
+  const [notes, setNotes] = useState("");
 
   const { id } = props.match.params;
 
@@ -45,6 +46,7 @@ function EditPigeon(props) {
     setRing(res.ring);
     setPpmbsi(res.ppmbsi);
     setColor(res.color);
+    setNotes(res.notes);
     if (res.dob) {
       setDob(moment(res.dob).format("YYYY-MM-DD"));
     }
@@ -105,6 +107,7 @@ function EditPigeon(props) {
       ppmbsi,
       color,
       dob,
+      notes,
       gender,
       parrents,
       shortid,
@@ -229,6 +232,17 @@ function EditPigeon(props) {
                   </button>
                 </div>
               </label>
+              <label className="block">
+                <span className="text-gray-700">Catatan</span>
+                <textarea
+                  type="textarea"
+                  name="notes"
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                  className="block h-20 my-1 bg-gray-100 border-transparent rounded shadow-md w-96 focus:border-gray-500 focus:bg-white focus:ring-0"
+                  placeholder=""
+                />
+              </label>
             </div>
             <div className="grid grid-cols-1 gap-6 p-2 lg:p-0">
               <label className="block">
@@ -305,7 +319,7 @@ function EditPigeon(props) {
                     <input
                       type="text"
                       name="indukJantan"
-                      value={indukJantan}
+                      value={indukJantan.ring || ""}
                       onChange={(e) => setIndukJantan(e.target.value)}
                       className="block w-full my-1 bg-gray-100 border-transparent rounded shadow-md focus:border-gray-500 focus:bg-white focus:ring-0"
                       placeholder=""

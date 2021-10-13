@@ -138,13 +138,15 @@ function Header(props) {
                 </Link>
               </li>
               <li className="my-2 mr-6 md:my-0">
-                <button
-                  href="#"
-                  className="block w-full py-1 pl-1 text-left text-gray-500 no-underline align-middle border-b-2 border-white focus:outline-none md:py-3 hover:text-gray-900 hover:border-purple-500"
-                >
-                  <i className="mr-3 fas fa-book-reader fa-fw" />
-                  <span className="pb-1 text-sm md:pb-0">Team</span>
-                </button>
+                <Link to="/trah">
+                  <button
+                    href="#"
+                    className="block w-full py-1 pl-1 text-left text-gray-500 no-underline align-middle border-b-2 border-white focus:outline-none md:py-3 hover:text-gray-900 hover:border-purple-500"
+                  >
+                    <i className="mr-3 fas fa-book-reader fa-fw" />
+                    <span className="pb-1 text-sm md:pb-0">Team</span>
+                  </button>
+                </Link>
               </li>
               <li className="my-2 mr-6 md:my-0">
                 <button
@@ -152,7 +154,7 @@ function Header(props) {
                   className="block w-full py-1 pl-1 text-left text-gray-500 no-underline align-middle border-b-2 border-white focus:outline-none md:py-3 hover:text-gray-900 hover:border-green-500"
                 >
                   <i className="mr-3 fas fa-sliders-h fa-fw" />
-                  <span className="pb-1 text-sm md:pb-0">Analytics</span>
+                  <span className="pb-1 text-sm md:pb-0">Bantuan</span>
                 </button>
               </li>
               <li className="my-2 mr-6 md:my-0">
@@ -161,7 +163,7 @@ function Header(props) {
                   className="block w-full py-1 pl-1 text-left text-gray-500 no-underline align-middle border-b-2 border-white focus:outline-none md:py-3 hover:text-gray-900 hover:border-red-500"
                 >
                   <i className="mr-3 fa fa-wallet fa-fw" />
-                  <span className="pb-1 text-sm md:pb-0">Payments</span>
+                  <span className="pb-1 text-sm md:pb-0">Kritik & Saran</span>
                 </button>
               </li>
             </ul>

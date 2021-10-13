@@ -12,6 +12,7 @@ function AddPigeon(props) {
   const [achievement, setAchievement] = useState([]);
   const [achievementAdd, setAchievementAdd] = useState("");
   const [name, setName] = useState("");
+  const [notes, setNotes] = useState("");
   const [ring, setRing] = useState("");
   const [ppmbsi, setPpmbsi] = useState("");
   const [color, setColor] = useState("");
@@ -59,6 +60,7 @@ function AddPigeon(props) {
       picture,
       achievement,
       name,
+      notes,
       ring,
       ppmbsi,
       color,
@@ -180,6 +182,17 @@ function AddPigeon(props) {
                 name="name"
                 onChange={(e) => setName(e.target.value)}
                 className="block my-1 bg-gray-100 border-transparent rounded shadow-md w-96 focus:border-gray-500 focus:bg-white focus:ring-0"
+                placeholder=""
+              />
+            </label>
+            <label className="block">
+              <span className="text-gray-700">Catatan</span>
+              <textarea
+                type="textarea"
+                name="notes"
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
+                className="block h-20 my-1 bg-gray-100 border-transparent rounded shadow-md w-96 focus:border-gray-500 focus:bg-white focus:ring-0"
                 placeholder=""
               />
             </label>
