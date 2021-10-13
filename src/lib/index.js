@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BaseUrl = "http://192.168.1.64:9901/v1/";
+export const BaseUrl = "https://warrior-backend.herokuapp.com/v1/";
 
 const setHeader = () => {
   const token = localStorage.getItem("token");
